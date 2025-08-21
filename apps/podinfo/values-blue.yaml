@@ -1,0 +1,7 @@
+fullnameOverride: podinfo-blue
+replicaCount: 2
+service:
+  type: ClusterIP
+podAnnotations:
+  linkerd.io/inject: "enabled"
+
