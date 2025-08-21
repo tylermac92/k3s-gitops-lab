@@ -11,12 +11,12 @@ spec:
     targetRevision: 6.6.3
     helm:
       values: |
-				fullnameOverride: podinfo-blue
-				replicaCount: 2
-				service:
-  				type: ClusterIP
-				podAnnotations:
-  				linkerd.io/inject: "enabled"
+        fullnameOverride: podinfo-blue
+        replicaCount: 2
+        service:
+          type: ClusterIP
+          podAnnotations:
+            linkerd.io/inject: "enabled"
   destination:
     server: https://kubernetes.default.svc
     namespace: demo
