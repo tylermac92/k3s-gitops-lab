@@ -10,7 +10,13 @@ spec:
     chart: podinfo
     targetRevision: 6.6.3
     helm:
-      valueFiles: [values-blue.yaml]
+      values: |
+				fullnameOverride: podinfo-blue
+				replicaCount: 2
+				service:
+  				type: ClusterIP
+				podAnnotations:
+  				linkerd.io/inject: "enabled"
   destination:
     server: https://kubernetes.default.svc
     namespace: demo
@@ -29,7 +35,13 @@ spec:
     chart: podinfo
     targetRevision: 6.6.3
     helm:
-      valueFiles: [values-green.yaml]
+      values: |
+        fullnameOverride: podinfo-green
+        replicaCount: 2
+        service:
+          type: ClusterIP
+        podAnnotations:
+          linkerd.io/inject: "enabled"
   destination:
     server: https://kubernetes.default.svc
     namespace: demo
