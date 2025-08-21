@@ -8,12 +8,39 @@ spec:
   source:
     repoURL: https://helm.linkerd.io/stable
     chart: linkerd-control-plane
-    targetRevision: 1.17.2
+    targetRevision: 1.16.11
     helm:
       values: |
         identityTrustAnchorsPEM: |
           -----BEGIN CERTIFICATE-----
-          MIIB...
+          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
+          DquhBL+HiNeQ1dmM+TSAHSMrHA==
           -----END CERTIFICATE-----
         identity:
           issuer:
